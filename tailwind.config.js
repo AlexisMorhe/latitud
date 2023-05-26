@@ -4,6 +4,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/flowbite-react/**/*.js',
   ],
   theme: {
     extend: {
@@ -12,7 +13,17 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        cinzel: ['var(--font-cinzel)'],
+        cormorant: ['var(--font-cormorant-upright)'],
+        karla: ['var(--font-karla)'],
+      },
+      colors: {
+        'secondary-blue': 'rgb(13, 80, 140)',
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
